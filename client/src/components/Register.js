@@ -4,17 +4,15 @@ import {
   Avatar,
   Button,
   TextField,
-  FormControlLabel,
-  Checkbox,
   Box,
   Typography,
   Container,
   Paper,
 } from "@mui/material";
 import LockOutlinedIcon from "@mui/icons-material/LockOutlined";
-import { Link as RouterLink, useNavigate } from 'react-router-dom'
+import {Link as RouterLink, useNavigate} from 'react-router-dom';
 
-const  SignIn =() =>{
+const  Register =() =>{
   const [formData, setFormData] = useState({ uname: "", password: "",role: ""});
   const [status, setStatus] = useState("");
   const navigate = useNavigate();
@@ -27,18 +25,14 @@ const  SignIn =() =>{
     e.preventDefault();
     setStatus("Please wait...");
     try {
-        const res = await axios.post(`${process.env.REACT_APP_BACKEND_URL}/api/login`, formData);
+        const res = await axios.post(`${process.env.REACT_APP_BACKEND_URL}/api/register`, formData);
         setStatus(res.data.message);
-        if(res.data.success){
-          localStorage.setItem('token', res.data.token);
-          localStorage.setItem('role', res.data.user.role);
-          setTimeout(() =>navigate("/"),1500);
-          } 
         setFormData({ uname: "", password: "", role: "" });
+        navigate('/login');
         // Handle successful login (e.g., redirect, store token)
       } catch (error) {
-        setStatus(error.response?.data?.message||"Login failed. Please check your credentials and try again.");
-        } setTimeout(() => { setStatus("") }, 3000);
+        setStatus(` ${error.response.data.message || error.message}`);
+        }
   };
 
   return (
@@ -52,7 +46,6 @@ const  SignIn =() =>{
         alignItems: "center",
         minHeight: "100vh",
         background: "linear-gradient(to right, #b7802fff, #f9f4ef)",
-    
       }}
     >
       <Paper
@@ -74,11 +67,11 @@ const  SignIn =() =>{
             mb: 2,
           }}
         >
-          <LockOutlinedIcon fontSize="large"  />
+          <LockOutlinedIcon fontSize="large" />
         </Avatar>
 
         <Typography component="h1" variant="h5" color="#6d0707e0" sx={{ mb: 3, fontWeight: 600 }}>
-          LOGIN
+          REGISTER
         </Typography>
 
         <Box component="form" onSubmit={handleSubmit}>
@@ -112,13 +105,6 @@ const  SignIn =() =>{
             value={formData.role}
             onChange={handleChange}
           />
-
-          <FormControlLabel
-            control={<Checkbox color="primary" />}
-            label="Remember me"
-            sx={{ mt: 1 }}
-          />
-
           <Button
             type="submit"
             fullWidth
@@ -132,16 +118,17 @@ const  SignIn =() =>{
               backgroundColor: "#6d0707e0",
             }}
           >
-            LOGIN
+            REGISTER
           </Button>
           <Typography variant="body2" sx={{ mt: 2 }}>
-            Don't have an account?{" "}
-            <RouterLink  to="/register" style={{ color:"#6d0707e0", fontWeight: 600 }}>
-              Register
-            </RouterLink>
-          </Typography>
+              Already have an account?{" "}
+              <RouterLink to="/login" style={{ color: "#6d0707e0", fontWeight: 600 }}>
+                Login
+              </RouterLink>
+            </Typography>
         </Box>
-        <Typography variant="body2" color="textSecondary" sx={{ mt: 2 }}>
+          {/*  Status message */}
+          <Typography variant="body2" color="textSecondary" sx={{ mt: 2 }}>
             {status}
           </Typography>
       </Paper>
@@ -149,4 +136,4 @@ const  SignIn =() =>{
     </div>
   );
 };
-export default SignIn;
+export default Register;
