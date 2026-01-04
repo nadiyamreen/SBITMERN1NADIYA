@@ -62,8 +62,8 @@ const Home = () => {
               fontWeight: 600,
               borderRadius: "30px",
               backgroundColor: "#b16363e0",
-              color: "#b7802fff",
-              "&:hover": { backgroundColor: "#8a3f3fe0" },
+              color: "#7bc47",
+              "&:hover": { backgroundColor: "#7bc47" },
             }}
           >
             LOGIN
@@ -76,9 +76,9 @@ const Home = () => {
               px: 4,
               fontWeight: 600,
               borderRadius: "30px",
-              backgroundColor: "#b7802fff",
+              backgroundColor: "#7bc47",
               color: "#fff",
-              "&:hover": { backgroundColor: "#b7802fff" },
+              "&:hover": { backgroundColor: "#7bc47" },
             }}
           >
             REGISTER
