@@ -108,7 +108,7 @@ const FacultyList = ({facilty}) => {
         style={{
           marginBottom: "30px",
           backgroundColor: "#f9f4ef",
-          border: "2px solid #6d0707e0",
+          border: "2px solid #7bc47",
           borderRadius: "10px",
           padding: "15px",
         }}
@@ -152,7 +152,7 @@ const FacultyList = ({facilty}) => {
         <button
           type="submit"
           style={{
-            backgroundColor: "#6d0707e0",
+            backgroundColor: "#7bc47",
             color: "#f9f4ef",
             padding: "10px 15px",
             border: "none",
@@ -188,7 +188,7 @@ const FacultyList = ({facilty}) => {
               border: "2px solid #6d0707e0",
               borderRadius: "10px",
               padding: "15px",
-              color: "#b7802fff",
+              color: "#7bc47",
               backgroundColor: "#f9f4ef",
               transition: "transform 0.2s ease-in-out",
             }}
@@ -204,21 +204,21 @@ const FacultyList = ({facilty}) => {
         height: "120px",
         borderRadius: "50%",
         objectFit: "cover",
-        border: "3px solid #6d0707e0",
+        border: "3px solid #7bc47",
         marginBottom: "10px",
       }}
       onError={(e) => (e.target.src = "/default-avatar.jpg")} // fallback
     />
-            <h3><strong style={{ color: "#520505ff" }}>Name:</strong> {fac.name}</h3>
-            <h3><strong style={{ color: "#520505ff" }}>Designation:</strong> {fac.designation}</h3>
-            <h3><strong style={{ color: "#520505ff" }}>Qualification:</strong> {fac.qualification}</h3>
-            <h3><strong style={{ color: "#520505ff" }}>Salary:</strong> {fac.salary}</h3>
+            <h3><strong style={{ color: "#7bc47" }}>Name:</strong> {fac.name}</h3>
+            <h3><strong style={{ color: "#7bc47" }}>Designation:</strong> {fac.designation}</h3>
+            <h3><strong style={{ color: "#7bc47" }}>Qualification:</strong> {fac.qualification}</h3>
+            <h3><strong style={{ color: "#7bc47" }}>Salary:</strong> {fac.salary}</h3>
 
             <div >
               <button
                 onClick={() => editFaculty(fac)}
                 style={{
-                    backgroundColor: "#b7802fff",
+                    backgroundColor: "#7bc47",
                   color: "#fff",
                   border: "none",
                   padding: "5px 10px",
@@ -232,7 +232,7 @@ const FacultyList = ({facilty}) => {
               <button
                 onClick={() => deleteFaculty(fac._id)}
                 style={{
-                  backgroundColor: "#6d0707e0",
+                  backgroundColor: "#7bc47",
                   color: "#fff",
                   border: "none",
                   padding: "5px 10px",
