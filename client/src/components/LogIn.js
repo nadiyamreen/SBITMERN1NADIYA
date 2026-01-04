@@ -77,7 +77,7 @@ const  SignIn =() =>{
           <LockOutlinedIcon fontSize="large"  />
         </Avatar>
 
-        <Typography component="h1" variant="h5" color="#6d0707e0" sx={{ mb: 3, fontWeight: 600 }}>
+        <Typography component="h1" variant="h5" color="#7bc47f" sx={{ mb: 3, fontWeight: 600 }}>
           LOGIN
         </Typography>
 
@@ -129,14 +129,14 @@ const  SignIn =() =>{
               py: 1.2,
               fontWeight: 600,
               borderRadius: 2,
-              backgroundColor: "#6d0707e0",
+              backgroundColor: "#7bc47f",
             }}
           >
             LOGIN
           </Button>
           <Typography variant="body2" sx={{ mt: 2 }}>
             Don't have an account?{" "}
-            <RouterLink  to="/register" style={{ color:"#6d0707e0", fontWeight: 600 }}>
+            <RouterLink  to="/register" style={{ color:"#7bc47f", fontWeight: 600 }}>
               Register
             </RouterLink>
           </Typography>

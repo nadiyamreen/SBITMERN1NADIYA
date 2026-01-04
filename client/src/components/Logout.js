@@ -65,7 +65,7 @@ const Logout = () => {
         justifyContent: "center",
         alignItems: "center",
         minHeight: "100vh",
-        background: "linear-gradient(to right, #b7802fff, #f9f4ef)",
+        background: "linear-gradient(to right, #7bc47f, #f9f4ef)",
       }}
     >
       <Paper
@@ -90,7 +90,7 @@ const Logout = () => {
           <LockOutlinedIcon fontSize="large" />
         </Avatar>
 
-        <Typography component="h1" variant="h5" color="#6d0707e0" sx={{ mb: 3, fontWeight: 600 }}>
+        <Typography component="h1" variant="h5" color="#7bc47f" sx={{ mb: 3, fontWeight: 600 }}>
           LOGOUT
         </Typography>
 
@@ -126,13 +126,13 @@ const Logout = () => {
               py: 1.2,
               fontWeight: 600,
               borderRadius: 2,
-              backgroundColor: "#6d0707e0",
+              backgroundColor: "#7bc47f",
             }}
           >
             LOGOUT
           </Button>
         </Box>
-        <p style={{ color: "#6d0707e0", marginTop: "1rem" }}>{status}</p>
+        <p style={{ color: "#7bc47f", marginTop: "1rem" }}>{status}</p>
       </Paper>
     </Container>
    </div>

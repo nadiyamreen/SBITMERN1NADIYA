@@ -8,7 +8,7 @@ const path = require('path');
 
 const studentRoutes = require('./routes/studentRoutes');
 const facultyRoutes = require('./routes/facultyRoutes');
-const supportstaffRoutes = require('./routes/suppportstaffRoutes');
+const supportstaffRoutes = require('./routes/supportstaffRoutes');
 const hostelstaffRoutes = require('./routes/hostelstaffRoutes');
 const managementRoutes = require('./routes/managementRoutes');
 const feedbackRoute = require('./routes/feedbackRoute');
