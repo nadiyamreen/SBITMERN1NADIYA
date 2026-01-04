@@ -69,7 +69,7 @@ const  FeedBack =() =>{
         
         </Avatar>
 
-        <Typography component="h1" variant="h5" color="#6d0707e0" sx={{ mb: 3, fontWeight: 600 }}>
+        <Typography component="h1" variant="h5" color="#7bc47" sx={{ mb: 3, fontWeight: 600 }}>
           FEEDBACK
         </Typography>
 
@@ -113,7 +113,7 @@ const  FeedBack =() =>{
               py: 1.2,
               fontWeight: 600,
               borderRadius: 2,
-              backgroundColor: "#6d0707e0",
+              backgroundColor: "#7bc47",
             }}
           >
             SUBMIT
