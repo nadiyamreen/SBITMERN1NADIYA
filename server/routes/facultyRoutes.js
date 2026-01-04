@@ -1,4 +1,5 @@
 const express = require("express");
+const router = express.Router();
 const {
   createFaculty,
   getFaculties,
@@ -11,7 +12,7 @@ const {
   roleCheck,
 } = require("../middleware/authMiddleware");
 
-const router = express.Router();
+
 
 // ADD faculty → faculty & management
 router.post(

@@ -1,4 +1,5 @@
 const express = require("express");
+const router = express.Router();
 const {
   createStudent,
   getStudents,
@@ -11,7 +12,7 @@ const {
   roleCheck,
 } = require("../middleware/authMiddleware");
 
-const router = express.Router();
+
 
 // ADD student → student & management
 router.post(

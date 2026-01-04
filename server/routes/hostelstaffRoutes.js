@@ -1,4 +1,5 @@
 const express = require("express");
+const router = express.Router();
 const {
   createHStaff,
   getHStaffs,
@@ -11,7 +12,7 @@ const {
   roleCheck,
 } = require("../middleware/authMiddleware");
 
-const router = express.Router();
+
 
 // ADD hostel staff → staff + management
 router.post(

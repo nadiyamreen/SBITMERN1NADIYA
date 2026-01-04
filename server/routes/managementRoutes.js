@@ -1,3 +1,5 @@
+const express = require("express");
+const router = express.Router();
 
 const {
   createManagement,
@@ -11,7 +13,7 @@ const {
   roleCheck,
 } = require("../middleware/authMiddleware");
 
-const router = express.Router();
+
 
 // ADD management → management only
 router.post(
