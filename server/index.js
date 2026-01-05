@@ -1,8 +1,14 @@
+const cors = require("cors");
+
+app.use(cors({
+  origin: "https://sbitmern1nadiya-5.onrender.com",
+  methods: ["GET", "POST", "PUT", "DELETE"],
+  credentials: true
+}));
 
 const dotenv = require('dotenv');
 const express = require('express');
 const mongoose = require('mongoose');
-const cors = require('cors');
 const bodyParser = require('body-parser');
 const path = require('path');
 
@@ -15,14 +21,7 @@ const feedbackRoute = require('./routes/feedbackRoute');
 const authRoutes = require('./routes/authRoutes');
 
 dotenv.config();
-const app = express();
-app.use(cors({
-  origin: [
-     "http://localhost:3000",
-    "https://sbitmern1anaam.onrender.com"
-  ],
-  credentials: true
-}));
+
 app.use(bodyParser.json());
 // ✅ Serve static files from public/images
 app.use('/images', express.static(path.join(__dirname, 'public', 'images')));
