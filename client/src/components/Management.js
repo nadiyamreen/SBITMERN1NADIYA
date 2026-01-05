@@ -132,7 +132,7 @@ const ManagementList = () => {
         key={mag._id}
         style={{
           textAlign: "center",
-          borderBottom: "1px solid #cfead3",
+          borderBottom: "1px solid #7bc47f",
           transition: "background-color 0.2s ease",
         }}
         onMouseEnter={(e) =>
@@ -158,7 +158,7 @@ const ManagementList = () => {
           {mag.salary}
         </td>
 
-        <td style={{ padding: "12px", border: "1px solid #cfead3" }}>
+        <td style={{ padding: "12px", border: "1px solid #7bc47f" }}>
           <button
             onClick={() => editManagement(mag)}
             style={{
@@ -177,7 +177,7 @@ const ManagementList = () => {
           <button
             onClick={() => deleteManagement(mag._id)}
             style={{
-              backgroundColor: "#4caf50",
+              backgroundColor: "#7bc47f",
               color: "#ffffff",
               border: "none",
               padding: "6px 10px",
