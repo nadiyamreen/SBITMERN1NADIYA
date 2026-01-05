@@ -31,7 +31,7 @@ const Home = () => {
     title: {
       fontSize: "4vw",
       fontWeight: "800",
-      color: "#60bda1ff",
+      color: "#7bc47",
       textShadow: "2px 2px 5px rgba(255,255,255,0.9)",
       marginBottom: "2vw",
     },
@@ -61,7 +61,7 @@ const Home = () => {
               px: 4,
               fontWeight: 600,
               borderRadius: "30px",
-              backgroundColor: "#b16363e0",
+              backgroundColor: "#7bc47",
               color: "#7bc47",
               "&:hover": { backgroundColor: "#7bc47" },
             }}
