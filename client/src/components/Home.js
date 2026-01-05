@@ -1,6 +1,4 @@
 import React from "react";
-import logo from "./banner.jpg";
-import pic from "./pic.jpg";
 import { Button } from "@mui/material";
 import { useNavigate } from "react-router-dom";
 
@@ -18,7 +16,7 @@ const Home = () => {
       height: "34vw",
       width: "80%",
       margin: "0 auto",
-      background: `url(${pic}) no-repeat center center`,
+      background: "url(/pic.jpg) no-repeat center center",
       backgroundSize: "cover",
       position: "relative",
       display: "flex",
@@ -26,12 +24,12 @@ const Home = () => {
       alignItems: "center",
       justifyContent: "center",
       textAlign: "center",
-      color: "#fff",
+      color: "#ffffff",
     },
     title: {
       fontSize: "4vw",
       fontWeight: "800",
-      color: "#7bc47",
+      color: "#7BC47F",
       textShadow: "2px 2px 5px rgba(255,255,255,0.9)",
       marginBottom: "2vw",
     },
@@ -44,12 +42,10 @@ const Home = () => {
 
   return (
     <div>
-      {/* Banner Section */}
-      <div >
-        <img src={logo} alt="SBIT Banner" style={styles.bannerImage} />
+      <div>
+        <img src="/banner.jpg" alt="SBIT Banner" style={styles.bannerImage} />
       </div>
 
-      {/* Header Section */}
       <div style={styles.header}>
         <h2 style={styles.title}>WELCOME</h2>
 
@@ -61,9 +57,9 @@ const Home = () => {
               px: 4,
               fontWeight: 600,
               borderRadius: "30px",
-              backgroundColor: "#7bc47",
-              color: "#7bc47",
-              "&:hover": { backgroundColor: "#7bc47" },
+              backgroundColor: "#7BC47F",
+              color: "#ffffff",
+              "&:hover": { backgroundColor: "#6FB573" },
             }}
           >
             LOGIN
@@ -76,9 +72,9 @@ const Home = () => {
               px: 4,
               fontWeight: 600,
               borderRadius: "30px",
-              backgroundColor: "#7bc47",
-              color: "#fff",
-              "&:hover": { backgroundColor: "#7bc47" },
+              backgroundColor: "#7BC47F",
+              color: "#ffffff",
+              "&:hover": { backgroundColor: "#6FB573" },
             }}
           >
             REGISTER
