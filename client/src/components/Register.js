@@ -10,33 +10,43 @@ import {
   Paper,
 } from "@mui/material";
 import LockOutlinedIcon from "@mui/icons-material/LockOutlined";
-import {Link as RouterLink, useNavigate} from 'react-router-dom';
+import { Link as RouterLink, useNavigate } from "react-router-dom";
 
-const  Register =() =>{
-  const [formData, setFormData] = useState({ uname: "", password: "",role: ""});
+const Register = () => {
+  const [formData, setFormData] = useState({
+    uname: "",
+    password: "",
+    role: "",
+  });
   const [status, setStatus] = useState("");
   const navigate = useNavigate();
-  
+
   const handleChange = (e) => {
-    setFormData({...formData,[e.target.name]: e.target.value,});
+    setFormData({ ...formData, [e.target.name]: e.target.value });
   };
 
   const handleSubmit = async (e) => {
     e.preventDefault();
     setStatus("Please wait...");
+
     try {
-        const res = await axios.post(`${process.env.REACT_APP_BACKEND_URL}/api/register`, formData);
-        setStatus(res.data.message);
-        setFormData({ uname: "", password: "", role: "" });
-        navigate('/login');
-        // Handle successful login (e.g., redirect, store token)
-      } catch (error) {
-        setStatus(` ${error.response.data.message || error.message}`);
-        }
+      const res = await axios.post(
+        `${process.env.REACT_APP_BACKEND_URL}/api/register`,
+        formData
+      );
+
+      setStatus(res.data.message || "Registered successfully");
+      setFormData({ uname: "", password: "", role: "" });
+      navigate("/login");
+    } catch (error) {
+      setStatus(
+        error.response?.data?.message ||
+          "Server error. Please try again later."
+      );
+    }
   };
 
   return (
-    <div>
     <Container
       component="main"
       maxWidth="sm"
@@ -45,7 +55,7 @@ const  Register =() =>{
         justifyContent: "center",
         alignItems: "center",
         minHeight: "100vh",
-        background: "linear-gradient(to right, #b7802fff, #f9f4ef)",
+        background: "linear-gradient(to right, #7BC47F, #f9f4ef)",
       }}
     >
       <Paper
@@ -59,8 +69,9 @@ const  Register =() =>{
         }}
       >
         <Avatar
+          src=""
           sx={{
-            bgcolor: "primary.main",
+            bgcolor: "#7BC47F",
             width: 60,
             height: 60,
             margin: "auto",
@@ -70,7 +81,11 @@ const  Register =() =>{
           <LockOutlinedIcon fontSize="large" />
         </Avatar>
 
-        <Typography component="h1" variant="h5" color="#6d0707e0" sx={{ mb: 3, fontWeight: 600 }}>
+        <Typography
+          component="h1"
+          variant="h5"
+          sx={{ mb: 3, fontWeight: 600, color: "#7BC47F" }}
+        >
           REGISTER
         </Typography>
 
@@ -82,7 +97,7 @@ const  Register =() =>{
             required
             margin="normal"
             value={formData.uname}
-            onChange={handleChange} 
+            onChange={handleChange}
           />
 
           <TextField
@@ -96,7 +111,7 @@ const  Register =() =>{
             onChange={handleChange}
           />
 
-            <TextField
+          <TextField
             label="Role"
             name="role"
             fullWidth
@@ -105,6 +120,7 @@ const  Register =() =>{
             value={formData.role}
             onChange={handleChange}
           />
+
           <Button
             type="submit"
             fullWidth
@@ -115,25 +131,32 @@ const  Register =() =>{
               py: 1.2,
               fontWeight: 600,
               borderRadius: 2,
-              backgroundColor: "#6d0707e0",
+              backgroundColor: "#7BC47F",
+              "&:hover": { backgroundColor: "#6FB573" },
             }}
           >
             REGISTER
           </Button>
+
           <Typography variant="body2" sx={{ mt: 2 }}>
-              Already have an account?{" "}
-              <RouterLink to="/login" style={{ color: "#6d0707e0", fontWeight: 600 }}>
-                Login
-              </RouterLink>
-            </Typography>
-        </Box>
-          {/*  Status message */}
-          <Typography variant="body2" color="textSecondary" sx={{ mt: 2 }}>
-            {status}
+            Already have an account?{" "}
+            <RouterLink
+              to="/login"
+              style={{ color: "#7BC47F", fontWeight: 600 }}
+            >
+              Login
+            </RouterLink>
           </Typography>
+        </Box>
+
+        <Typography variant="body2" sx={{ mt: 2 }}>
+          {status}
+        </Typography>
       </Paper>
     </Container>
-    </div>
   );
 };
+
 export default Register;
+
+
