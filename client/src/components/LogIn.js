@@ -51,7 +51,7 @@ const  SignIn =() =>{
         justifyContent: "center",
         alignItems: "center",
         minHeight: "100vh",
-        background: "linear-gradient(to right, #b7802fff, #f9f4ef)",
+        background: "linear-gradient(to right, ##7bc47f, #f9f4ef)",
     
       }}
     >
