@@ -100,7 +100,7 @@ const FacultyList = ({facilty}) => {
 
   return (
     <div style={{ padding: "20px", maxWidth: "1000px", margin: "auto" }}>
-      <h2 style={{ color: "#510f0fdb", textAlign: "center" }}>Faculty </h2>
+      <h2 style={{ color: "##7bc47f", textAlign: "center" }}>Faculty </h2>
 
       {/* Form Section */}
       <form
@@ -166,7 +166,7 @@ const FacultyList = ({facilty}) => {
       </form>
 
       {/* Status Message */}
-      <p style={{ color: "#520505ff", fontWeight: "bold" }}>{status}</p>
+      <p style={{ color: "##7bc47f", fontWeight: "bold" }}>{status}</p>
 
       {/* Faculty Cards */}
       <ul
@@ -185,7 +185,7 @@ const FacultyList = ({facilty}) => {
             key={fac._id}
             style={{
               minWidth: "300px",
-              border: "2px solid #6d0707e0",
+              border: "2px solid ##7bc47f",
               borderRadius: "10px",
               padding: "15px",
               color: "#7bc47",
