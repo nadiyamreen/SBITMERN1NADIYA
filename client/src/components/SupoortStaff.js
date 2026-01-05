@@ -119,7 +119,7 @@ const SStaffList = () => {
         key={ssf._id}
         style={{
           textAlign: "center",
-          borderBottom: "1px solid #cfead3",
+          borderBottom: "1px solid #7bc47f",
           transition: "background-color 0.2s ease",
         }}
         onMouseEnter={(e) =>
